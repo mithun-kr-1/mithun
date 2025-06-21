@@ -39,6 +39,27 @@
       }
     }
 
+    .typewriter {
+      display: inline-block;
+      overflow: hidden;
+      border-right: 2px solid white;
+      white-space: nowrap;
+      animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: white; }
+    }
+
     nav ul {
       list-style: none;
       display: flex;
@@ -137,8 +158,7 @@
 <body>
   <header>
     <h1>Mithun K R</h1><br>
-    <p><b>Aspiring Computer Science Engineer | Web Developer | UI/UX Designer</b></p>
-    
+    <p class="typewriter">Aspiring Computer Science Engineer | Web Developer | UI/UX Designer</p>
   </header>
 
   <div id="image">
