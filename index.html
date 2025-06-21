@@ -121,9 +121,9 @@
       background: white;
       border-radius: 20px;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-      transform: rotateY(3deg);
-      transition: transform 0.5s ease;
-      animation: fadeInUp 1.2s ease-in;
+      opacity: 0;
+      transform: translateX(100px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
 
     section:hover {
@@ -298,5 +298,24 @@
 <!--   <footer>
     <p>&copy; 2025 Mithun K R. All rights reserved.</p>
   </footer> -->
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateX(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach((section, index) => {
+      if (index % 2 !== 0) {
+        section.style.transform = 'translateX(-100px)';
+      }
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
