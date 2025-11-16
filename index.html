@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,3 +13,326 @@
   </body>
 </html>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mithun  - Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: "Segoe UI", sans-serif;
+      color: #333;
+      overflow-x: hidden;
+      position: relative;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    }
+
+    .background-anim {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .dots {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: rgba(0, 136, 255, 0.3);
+      border-radius: 50%;
+      animation: float 15s linear infinite;
+    }
+
+    .dots:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+    .dots:nth-child(2) { top: 20%; left: 80%; animation-delay: 2s; }
+    .dots:nth-child(3) { top: 70%; left: 30%; animation-delay: 4s; }
+    .dots:nth-child(4) { top: 50%; left: 60%; animation-delay: 6s; }
+    .dots:nth-child(5) { top: 30%; left: 40%; animation-delay: 8s; }
+
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); opacity: 0.8; }
+      50% { transform: translateY(-40px) scale(1.2); opacity: 0.4; }
+      100% { transform: translateY(0) scale(1); opacity: 0.8; }
+    }
+
+    header {
+      background: linear-gradient(120deg, #283c86bb, #45a247bb);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      transform: perspective(1000px) rotateX(5deg);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      animation: slideInDown 1.2s ease-out;
+    }
+
+    @keyframes slideInDown {
+      from {
+        transform: translateY(-200px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .typewriter {
+      display: inline-block;
+      overflow: hidden;
+      border-right: 2px solid white;
+      white-space: nowrap;
+      animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: white; }
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      transform: scale(1.2);
+      color: #ffe600;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 40px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      opacity: 0;
+      transform: translateX(100px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    section:hover {
+      transform: rotateY(0deg) scale(1.01);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(80px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #283c86;
+      font-size: 28px;
+      border-left: 5px solid #45a247;
+      padding-left: 15px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    p, li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    #image {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    #image img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #45a247;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+      animation: spinZoom 1.5s ease-in-out;
+    }
+
+    @keyframes spinZoom {
+      0% {
+        transform: scale(0.8) rotateY(0deg);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.1) rotateY(180deg);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1) rotateY(360deg);
+        opacity: 1;
+      }
+    }
+
+    footer {
+      background: #283c86;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      transform: perspective(1000px) rotateX(-5deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="background-anim">
+    <div class="dots"></div>
+    <div class="dots"></div>
+    <div class="dots"></div>
+    <div class="dots"></div>
+    <div class="dots"></div>
+  </div>
+
+  <header>
+    <h1>Mithun K R</h1><br>
+    <p class="typewriter">Aspiring Computer Science Engineer | Web Developer | UI/UX Designer</p>
+  </header>
+
+  <div id="image">
+    <img src="mithunimg.jpg" alt="Mithun K R">
+  </div>
+
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a Computer Science student with a strong academic record and passion for technology. Skilled in web development, UI/UX design (Figma, React.js), and beginner-level in MERN stack. Enthusiastic about building scalable applications and solving real-world problems. Aspiring Software Engineer with a strong interest in AI-driven solutions, documentation and management systems.</p>
+  </section>
+
+   <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li><b>Pentagon Space Pvt. Ltd.</b> – Working on MERN stack, Figma UI/UX. <i>(Present)</i></li>
+      <li><b>Unriddle Technologies Pvt. Ltd.</b> – React Intern for DScribe (Healthcare Digitization). <i>(March 2025)</i></li>
+      <li><b>Seventh Sense Talent Solutions</b> – Developed learning tools and explored entrepreneurship. <i>(Oct–Nov 2023)</i></li>
+      <li><b>GTTC Hassan</b> – IoT Intern. Created smartphone-controlled car using Wi-Fi with DesignTech. <i>(May–June 2023)</i></li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><b>Power Matrix (React)</b><br> A decentralized platform for carbon credit trading and renewable energy sharing to reduce emissions and promote sustainability by connecting users and verified providers.</li>
+      <li><b>Complaint Management Portal (Django, Python)</b><br> Enabled users to raise issues, track resolutions, and give feedback using structured workflows and categorized issue handling.</li>
+      <li><b>E-Commerce (React, Node, MongoDB)</b><br> Built a responsive frontend supporting search, filters, cart, and checkout experience using React.js.</li>
+      <li><b>Custom VPN Development (OpenVPN, NAC)</b><br> Created a secure VPN integrated with face login and NAC to boost security against cyber threats.</li>
+      <li><b>UI/UX Design (Figma)</b><br> Designed UI/UX interfaces and cloned layouts like BookMyShow to improve responsiveness and user flow.</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Languages: Python (Basics), JavaScript, HTML5, CSS3</li>
+      <li>Frameworks & Tools: React.js, Django, Figma</li>
+      <li>Developer Tools: Git, Linux, VS Code, Cursor, AI Tools</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>B.E. in Computer Science – VTU, GEC Hassan – <b>CGPA: 7.61</b> <i>(2021–2025)</i></li>
+      <li>Masters PU College, Hassan – PCMB – <b>84.83%</b> <i>(2020–2021)</i></li>
+      <li>Vasavi English Medium School – SSLC – <b>82.4%</b> <i>(2018–2019)</i></li>
+    </ul>
+  </section>
+
+  <section id="activities">
+    <h2>Activities</h2>
+    <ul>
+      <li>Winner – TechForSociety Hackathon 2025 (Siemens + Nasscom)</li>
+      <li>Organized – State-level Hackathon at GEC Hassan (CSE Assoc.)</li>
+      <li>Participant – Metadome Emerging Tech Hackathon 2024</li>
+      <li>Participant – Infosys Springboard Summit 2024</li>
+      <li>Participant – Srishti Innovation Exchange 2024, AIT Bengaluru</li>
+      <li>Participant – TCS TechBytes 2024 (Mangalore)</li>
+      <li>Participant - IEEE SAMPARK – NIE Mysore</li>
+      <li>Attended – PRAGYATHA’22 UI/UX Workshop, MCE Hassan</li>
+      <li>Finalist – Hack4Sustainability (Siemens, Smile Foundation)</li>
+    </ul>
+  </section>
+
+  <section id="positions">
+    <h2>Positions of Responsibility</h2>
+    <ul>
+      <li><b>Media Handler</b> – ISTE | Active in NSS activities (2024–2025)</li>
+      <li><b>Session Handler</b> – GLUE (GEC Linux Users & Enthusiasts) (2024–2025)</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:mithunkr533@gmail.com">mithunkr533@gmail.com</a></p>
+    <p>Phone: <a href="tel:+918431072527">+91 8431072527</a></p>
+    <p>GitHub: <a href="https://github.com/mithun-kr-1">github.com/mithun-kr-1</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/mithun-k-r-3988b3257/">linkedin.com/in/mithun-k-r-3988b3257</a></p>
+    <p>Portfolio: <a href="https://mithun-kr-1.github.io/mithun/">mithun-kr-1.github.io/mithun</a></p>
+    <p>Figma: <a href="https://www.figma.com/design/G4HOHHgewGvTaAFl5QPGzJ/MITHUN-K-R-FIGMA-DESIGNS?node-id=0-1">Figma UI/UX Designs</a></p>
+  </section>
+
+<!--   <footer>
+    <p>&copy; 2025 Mithun K R. All rights reserved.</p>
+  </footer> -->
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateX(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach((section, index) => {
+      if (index % 2 !== 0) {
+        section.style.transform = 'translateX(-100px)';
+      }
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
+>>>>>>> 6d80e55791ceea82a11277e8096aed79aa622e81
